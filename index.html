@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast by Caleb Basil</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather Forecast</h1>
+      <div class="theme-toggle">
+        <label class="switch" title="Toggle Dark Mode">
+          <input type="checkbox" id="toggleTheme">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="Enter city name" aria-label="City name" autocomplete="off">
+      <div id="autocompleteList" class="autocomplete-list hidden"></div>
+      <button id="searchBtn">Search</button>
+      <button id="getLocationBtn">Use My Location</button>
+    </div>
+    <div id="errorMessage" class="error-message"></div>
+    <div id="loadingSpinner" class="spinner hidden"></div>
+    <div id="weatherData" class="weather-data hidden">
+      <h2 id="currentCity"></h2>
+      <p id="localTime"></p>
+      <div class="current-weather">
+        <img id="weatherIcon" src="" alt="Weather Icon">
+        <div>
+          <p id="temp"></p>
+          <p id="description"></p>
+          <p id="humidity"></p>
+          <p id="wind"></p>
+          <p id="uvIndex"></p>
+          <p id="airQuality"></p>
+        </div>
+      </div>
+    </div>
+    <div id="forecast" class="forecast-grid hidden"></div>
+    <footer>
+      <p>Created by Caleb Basil</p>
+    </footer>
+  </div>
+  <canvas id="weatherCanvas" class="weather-canvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
